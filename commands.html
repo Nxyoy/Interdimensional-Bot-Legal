@@ -10,47 +10,52 @@
   <style>
     .commands-container {
       display: flex;
+      justify-content: center;
+      align-items: flex-start;
       gap: 2rem;
       flex-wrap: wrap;
     }
-
     .command-nav {
-      flex: 1 1 200px;
-      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 1rem;
-      border-radius: 10px;
+      border-radius: 12px;
       max-width: 200px;
     }
-
-    .command-nav a {
+    .command-nav button {
+      margin: 0.3rem 0;
+      padding: 0.5rem 1rem;
+      background-color: #2e96db;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      font-family: 'WhiteRabbit', monospace;
+    }
+    .command-nav button:hover {
+      background-color: #50b2f0;
+    }
+    .command-group {
+      display: none;
+      max-width: 600px;
+    }
+    .command-group.active {
       display: block;
-      color: #2e96db;
-      text-decoration: none;
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
     }
-
-    .command-nav a:hover {
-      color: #50b2f0;
-      text-decoration: underline;
-    }
-
-    .command-section {
-      flex: 3 1 400px;
-    }
-
-    .command-section h3 {
+    .command-title {
       margin-top: 2rem;
       border-bottom: 1px solid #2e96db;
       padding-bottom: 0.5rem;
     }
-
-    code {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 2px 5px;
-      border-radius: 4px;
-    }
   </style>
+  <script>
+    function showGroup(id) {
+      const groups = document.querySelectorAll('.command-group');
+      groups.forEach(g => g.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </head>
 <body>
   <div class="side-bar left"></div>
@@ -59,25 +64,22 @@
   <main class="content-box">
     <h2>Commands</h2>
     <div class="commands-container">
-      <nav class="command-nav">
-        <strong>Categories</strong>
-        <a href="#fun">🎮 Fun</a>
-        <a href="#economy">💼 Economy</a>
-        <a href="#tools">🛠️ Tools</a>
-        <a href="#moderation">🧹 Moderation</a>
-        <a href="#music">🔊 Music</a>
-      </nav>
-      <div class="command-section">
-        <section id="fun">
-          <h3>🎮 Fun</h3>
+      <div class="command-nav">
+        <button onclick="showGroup('all')">All</button>
+        <button onclick="showGroup('fun')">Fun</button>
+        <button onclick="showGroup('economy')">Economy</button>
+        <button onclick="showGroup('tools')">Tools</button>
+        <button onclick="showGroup('moderation')">Moderation</button>
+        <button onclick="showGroup('music')">Music</button>
+      </div>
+      <div>
+        <div class="command-group active" id="all">
+          <div class="command-title">🎮 Fun</div>
           <ul>
             <li><code>/8ball</code> – Ask the magic ball a question</li>
             <li><code>/rate</code> – Get a random rating of anything</li>
           </ul>
-        </section>
-
-        <section id="economy">
-          <h3>💼 Economy</h3>
+          <div class="command-title">💼 Economy</div>
           <ul>
             <li><code>/work</code> – Earn some cash</li>
             <li><code>/crime</code> – Take a risk for money</li>
@@ -86,34 +88,67 @@
             <li><code>/deposit</code> – Move money into the bank</li>
             <li><code>/withdraw</code> – Take money from the bank</li>
           </ul>
-        </section>
-
-        <section id="tools">
-          <h3>🛠️ Tools</h3>
+          <div class="command-title">🛠️ Tools</div>
           <ul>
             <li><code>/invite</code> – Get the bot invite link</li>
             <li><code>/help</code> – Display help menu</li>
           </ul>
-        </section>
-
-        <section id="moderation">
-          <h3>🧹 Moderation</h3>
+          <div class="command-title">🪯 Moderation</div>
           <ul>
             <li><code>/kick</code> – Kick a user</li>
             <li><code>/ban</code> – Ban a user</li>
             <li><code>/mute</code> – Mute a user</li>
             <li><code>/unmute</code> – Unmute a user</li>
           </ul>
-        </section>
-
-        <section id="music">
-          <h3>🔊 Music</h3>
+          <div class="command-title">🔊 Music</div>
           <ul>
             <li><code>/play</code> – Play from YouTube, Spotify, SoundCloud</li>
             <li><code>/skip</code> – Skip the current song</li>
-            <li><code>/queue</code> – Show current queue</li>
+            <li><code>/queue</code> – Show the queue</li>
           </ul>
-        </section>
+        </div>
+        <div class="command-group" id="fun">
+          <div class="command-title">🎮 Fun</div>
+          <ul>
+            <li><code>/8ball</code> – Ask the magic ball a question</li>
+            <li><code>/rate</code> – Get a random rating of anything</li>
+          </ul>
+        </div>
+        <div class="command-group" id="economy">
+          <div class="command-title">💼 Economy</div>
+          <ul>
+            <li><code>/work</code> – Earn some cash</li>
+            <li><code>/crime</code> – Take a risk for money</li>
+            <li><code>/beg</code> – Beg for spare change</li>
+            <li><code>/balance</code> – View your wallet & bank</li>
+            <li><code>/deposit</code> – Move money into the bank</li>
+            <li><code>/withdraw</code> – Take money from the bank</li>
+          </ul>
+        </div>
+        <div class="command-group" id="tools">
+          <div class="command-title">🛠️ Tools</div>
+          <ul>
+            <li><code>/invite</code> – Get the bot invite link</li>
+            <li><code>/help</code> – Display help menu</li>
+          </ul>
+        </div>
+        <div class="command-group" id="moderation">
+          <div class="command-title">🪯 Moderation</div>
+          <ul>
+            <li><code>/kick</code> – Kick a user</li>
+            <li><code>/ban</code> – Ban a user</li>
+            <li><code>/mute</code> – Mute a user</li>
+            <li><code>/unmute</code> – Unmute a user</li>
+          </ul>
+        </div>
+        <div class="command-group" id="music">
+          <div class="command-title">🔊 Music</div>
+          <ul>
+            <li><code>/play</code> – Play from YouTube, Spotify, SoundCloud</li>
+            <li><code>/skip</code> – Skip the current song</li>
+            <li><code>/queue</code> – Show the queue</li>
+          </ul>
+        </div>
       </div>
     </div>
   </main>
