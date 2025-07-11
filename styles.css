@@ -69,12 +69,16 @@ ul {
   padding-left: 2rem;
 }
 
-footer {
+.footer-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 800px;
   text-align: center;
-  margin-top: auto;
-  padding: 1rem;
   font-size: 0.9rem;
   color: #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .side-bar {
