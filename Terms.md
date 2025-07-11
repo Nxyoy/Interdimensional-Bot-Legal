@@ -1,6 +1,3 @@
-# Interdimensional-Bot-TOS
-The Terms of service for the Interdimensional Bot on discord.
-
 # Terms of Service
 
 **Effective Date**: July 10, 2025  
