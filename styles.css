@@ -69,6 +69,62 @@ ul {
   padding-left: 2rem;
 }
 
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 80px;
+}
+
+.logo {
+  width: 140px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Glowing Title */
+.glow-title {
+  font-family: 'WhiteRabbit', monospace;
+  font-size: 2.8rem;
+  color: white;
+  text-shadow:
+    0 0 8px rgba(72, 176, 255, 0.6),
+    0 0 12px rgba(72, 176, 255, 0.7),
+    0 0 18px rgba(72, 176, 255, 0.8);
+  margin: 0;
+}
+
+/* Animated Gradient Border */
+.gradient-border {
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  background: black;
+  position: relative;
+  z-index: 1;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  z-index: -1;
+  background: linear-gradient(270deg, #47a7f5, #9a4efb, #47a7f5);
+  background-size: 600% 600%;
+  animation: gradientFlow 8s ease infinite;
+  border-radius: 20px;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .footer-box {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 1rem 2rem;
