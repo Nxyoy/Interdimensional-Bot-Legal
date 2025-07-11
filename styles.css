@@ -106,15 +106,15 @@ ul {
 }
 
 /* Only apply to links that are NOT buttons */
-a:not(.nav-button):not(.back-button):link,
-a:not(.nav-button):not(.back-button):visited,
-a:not(.nav-button):not(.back-button):hover,
-a:not(.nav-button):not(.back-button):active {
+a:not(.nav-button):not(.back-button):not(.glow-button):link,
+a:not(.nav-button):not(.back-button):not(.glow-button):visited,
+a:not(.nav-button):not(.back-button):not(.glow-button):hover,
+a:not(.nav-button):not(.back-button):not(.glow-button):active {
   color: #1f8491;
   text-decoration: underline;
 }
 
-a:not(.nav-button):not(.back-button):hover {
+a:not(.nav-button):not(.back-button):not(.glow-button):hover {
   color: #2ecddb;
 }
 
@@ -227,3 +227,28 @@ a:not(.nav-button):not(.back-button):hover {
 .back-button:hover {
   background-color: #50b2f0;
 }
+
+@media (max-width: 600px) {
+  .glow-title {
+    font-size: 2rem;
+  }
+
+  .nav-button, .glow-button {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+  }
+
+  .back-button {
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .side-bar {
+    display: none;
+  }
