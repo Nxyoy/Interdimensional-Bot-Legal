@@ -105,6 +105,19 @@ ul {
   z-index: 1;
 }
 
+/* Prevent link color from affecting button-styled <a> elements */
+a.nav-button,
+a.back-button {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+a.nav-button:hover,
+a.back-button:hover {
+  color: white !important; /* or whatever hover color you want */
+  text-decoration: none !important;
+}
+
 a:link,
 a:visited,
 a:hover,
