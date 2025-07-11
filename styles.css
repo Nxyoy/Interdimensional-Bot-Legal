@@ -105,29 +105,17 @@ ul {
   z-index: 1;
 }
 
-/* Prevent link color from affecting button-styled <a> elements */
-a.nav-button,
-a.back-button {
-  color: white;
-  text-decoration: none;
-}
-
-a.nav-button:hover,
-a.back-button:hover {
-  color: white; /* or whatever hover color you want */
-  text-decoration: none;
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-  color: #1f8491; /* change to any color you want */
+/* Only apply to links that are NOT buttons */
+a:not(.nav-button):not(.back-button):link,
+a:not(.nav-button):not(.back-button):visited,
+a:not(.nav-button):not(.back-button):hover,
+a:not(.nav-button):not(.back-button):active {
+  color: #1f8491;
   text-decoration: underline;
 }
 
-a:hover {
-  color: #2ecddb; /* color on hover */
+a:not(.nav-button):not(.back-button):hover {
+  color: #2ecddb;
 }
 
 .gradient-border::before {
