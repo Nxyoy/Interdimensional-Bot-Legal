@@ -105,6 +105,15 @@ ul {
   z-index: 1;
 }
 
+a {
+  color: #1f8491; /* change to any color you want */
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #2ecddb; /* color on hover */
+}
+
 .gradient-border::before {
   content: "";
   position: absolute;
