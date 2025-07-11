@@ -1,0 +1,88 @@
+
+@font-face {
+    font-family: "White Rabbit";
+    src: url("fonts/whitrabt.ttf") format("truetype");
+}
+
+body {
+    font-family: "White Rabbit", sans-serif;
+    background: linear-gradient(to bottom, #121211, #2e96db);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header, footer {
+    text-align: center;
+    padding: 1em;
+}
+
+header {
+    font-size: 2em;
+    margin-top: 2em;
+}
+
+footer {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-top: auto;
+    margin-bottom: 1em;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 16px;
+    padding: 2em;
+    max-width: 800px;
+    width: 90%;
+    margin: 2em auto;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-left, .sidebar-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background-color: #2e96db;
+}
+
+.sidebar-left {
+    left: 20px;
+}
+
+.sidebar-right {
+    right: 20px;
+}
+
+a.button {
+    display: inline-block;
+    background-color: #2e96db;
+    color: white;
+    padding: 1em 2em;
+    margin: 1em;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+a.button:hover {
+    background-color: #237fc4;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #2e96db;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    text-decoration: none;
+}
