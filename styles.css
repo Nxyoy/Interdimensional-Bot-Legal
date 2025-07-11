@@ -105,7 +105,10 @@ ul {
   z-index: 1;
 }
 
-a {
+a:link,
+a:visited,
+a:hover,
+a:active {
   color: #1f8491; /* change to any color you want */
   text-decoration: underline;
 }
