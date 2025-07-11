@@ -195,6 +195,24 @@ a:not(.nav-button):not(.back-button):not(.glow-button):hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
+.pp-container input[type="submit"] {
+  background-color: #ffc439;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-family: 'WhiteRabbit', monospace;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  opacity: 0.75; /* 75% transparency */
+}
+
+.pp-container input[type="submit"]:hover {
+  background-color: #ffdd66;
+  opacity: 0.5; /* 50% transparency on hover */
+}
+
 .side-bar {
   position: fixed;
   top: 0;
