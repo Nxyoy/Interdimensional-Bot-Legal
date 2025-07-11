@@ -118,6 +118,51 @@ a:not(.nav-button):not(.back-button):hover {
   color: #2ecddb;
 }
 
+.glow-button {
+  background-color: #2e96db;
+  color: white;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-family: 'WhiteRabbit', monospace;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  box-shadow:
+    0 0 8px rgba(72, 176, 255, 0.5),
+    0 0 12px rgba(72, 176, 255, 0.6),
+    0 0 18px rgba(72, 176, 255, 0.7);
+  animation: glowPulse 2.5s ease-in-out infinite;
+  transition: background-color 0.3s ease;
+}
+
+.glow-button:hover {
+  background-color: #50b2f0;
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow:
+      0 0 8px rgba(72, 176, 255, 0.5),
+      0 0 12px rgba(72, 176, 255, 0.6),
+      0 0 18px rgba(72, 176, 255, 0.7);
+  }
+  50% {
+    box-shadow:
+      0 0 14px rgba(72, 176, 255, 0.7),
+      0 0 18px rgba(72, 176, 255, 0.8),
+      0 0 26px rgba(72, 176, 255, 0.9);
+  }
+  100% {
+    box-shadow:
+      0 0 8px rgba(72, 176, 255, 0.5),
+      0 0 12px rgba(72, 176, 255, 0.6),
+      0 0 18px rgba(72, 176, 255, 0.7);
+  }
+}
+
 .gradient-border::before {
   content: "";
   position: absolute;
