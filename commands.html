@@ -1,28 +1,124 @@
-
 <!DOCTYPE html>
+<!-- commands.html -->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Commands - Interdimensional Bot</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commands</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" href="fonts/whitrabt.ttf" as="font" type="font/ttf" crossorigin>
+  <style>
+    .commands-container {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .command-nav {
+      flex: 1 1 200px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+      border-radius: 10px;
+      max-width: 200px;
+    }
+
+    .command-nav a {
+      display: block;
+      color: #2e96db;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .command-nav a:hover {
+      color: #50b2f0;
+      text-decoration: underline;
+    }
+
+    .command-section {
+      flex: 3 1 400px;
+    }
+
+    .command-section h3 {
+      margin-top: 2rem;
+      border-bottom: 1px solid #2e96db;
+      padding-bottom: 0.5rem;
+    }
+
+    code {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
-    <div class="sidebar-left"></div>
-    <div class="sidebar-right"></div>
-    <a class="back-button" href="index.html">← Back</a>
-    <header>Bot Commands</header>
-    <div class="container">
-        <ul>
-            <li><strong>/play</strong> — Play music from YouTube, Spotify, SoundCloud</li>
-            <li><strong>/pause</strong>, <strong>/resume</strong>, <strong>/stop</strong> — Control music playback</li>
-            <li><strong>/queue</strong> — View the current music queue</li>
-            <li><strong>/rate</strong> — Rate an item based on context</li>
-            <li><strong>/8ball</strong> — Ask the cosmic 8-ball a question</li>
-            <li><strong>/work</strong>, <strong>/crime</strong>, <strong>/beg</strong>, <strong>/rob</strong> — Economy commands</li>
-            <li><strong>/balance</strong>, <strong>/deposit</strong>, <strong>/withdraw</strong> — Manage your funds</li>
-            <li><strong>/serverstats</strong> — Check bot/server performance</li>
-        </ul>
+  <div class="side-bar left"></div>
+  <div class="side-bar right"></div>
+  <a class="back-button" href="index.html">← Back</a>
+  <main class="content-box">
+    <h2>Commands</h2>
+    <div class="commands-container">
+      <nav class="command-nav">
+        <strong>Categories</strong>
+        <a href="#fun">🎮 Fun</a>
+        <a href="#economy">💼 Economy</a>
+        <a href="#tools">🛠️ Tools</a>
+        <a href="#moderation">🧹 Moderation</a>
+        <a href="#music">🔊 Music</a>
+      </nav>
+      <div class="command-section">
+        <section id="fun">
+          <h3>🎮 Fun</h3>
+          <ul>
+            <li><code>/8ball</code> – Ask the magic ball a question</li>
+            <li><code>/rate</code> – Get a random rating of anything</li>
+          </ul>
+        </section>
+
+        <section id="economy">
+          <h3>💼 Economy</h3>
+          <ul>
+            <li><code>/work</code> – Earn some cash</li>
+            <li><code>/crime</code> – Take a risk for money</li>
+            <li><code>/beg</code> – Beg for spare change</li>
+            <li><code>/balance</code> – View your wallet & bank</li>
+            <li><code>/deposit</code> – Move money into the bank</li>
+            <li><code>/withdraw</code> – Take money from the bank</li>
+          </ul>
+        </section>
+
+        <section id="tools">
+          <h3>🛠️ Tools</h3>
+          <ul>
+            <li><code>/invite</code> – Get the bot invite link</li>
+            <li><code>/help</code> – Display help menu</li>
+          </ul>
+        </section>
+
+        <section id="moderation">
+          <h3>🧹 Moderation</h3>
+          <ul>
+            <li><code>/kick</code> – Kick a user</li>
+            <li><code>/ban</code> – Ban a user</li>
+            <li><code>/mute</code> – Mute a user</li>
+            <li><code>/unmute</code> – Unmute a user</li>
+          </ul>
+        </section>
+
+        <section id="music">
+          <h3>🔊 Music</h3>
+          <ul>
+            <li><code>/play</code> – Play from YouTube, Spotify, SoundCloud</li>
+            <li><code>/skip</code> – Skip the current song</li>
+            <li><code>/queue</code> – Show current queue</li>
+          </ul>
+        </section>
+      </div>
     </div>
-    <footer>© 2025 Interdimensional Bot · Created for Discord servers drifting across the multiverse.</footer>
+  </main>
+  <footer>
+    © 2025 Interdimensional Bot · Created for Discord servers drifting across the multiverse.
+  </footer>
 </body>
 </html>
