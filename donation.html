@@ -8,6 +8,32 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="preload" href="fonts/whitrabt.ttf" as="font" type="font/ttf" crossorigin>
   <style>
+    .back-button {
+      position: absolute;
+      top: 40px;
+      left: 45px;
+      background-color: #2e96db;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .back-button:hover {
+      background-color: #50b2f0;
+    }
+
+    .pp-container {
+      background-color: rgba(255, 255, 255, 0.75);
+      padding: 1.5rem;
+      border-radius: 12px;
+      display: inline-grid;
+      justify-items: center;
+      align-content: start;
+      gap: 0.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
     .pp-RVPN8W4WEVJ3Y {
       text-align: center;
       border: none;
@@ -22,47 +48,33 @@
       font-size: 1rem;
       line-height: 1.25rem;
       cursor: pointer;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    }
-
-    form.pp-container {
-      background-color: rgba(242, 242, 242, 0.25);
-      padding: 1.5rem;
-      border-radius: 12px;
-      display: inline-grid;
-      justify-items: center;
-      align-content: start;
-      gap: 0.5rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-
-    .back-button {
-      top: 40px;
-      left: 45px;
     }
   </style>
 </head>
 <body>
   <div class="side-bar left"></div>
   <div class="side-bar right"></div>
-  <a class="back-button" href="index.html">← Back</a>
-    <main class="content-box">
-    <h2>Support Interdimensional Bot</h2>
-    <p>I'm <strong>Nxyoy</strong>, an independent developer maintaining <strong>Interdimensional Bot (tag#6122)</strong> — a powerful Discord bot offering music, economy, moderation, and fun commands.</p>
-    <p>Your donation helps cover:</p>
-    <ul>
-      <li>🔧 Hosting and infrastructure</li>
-      <li>🚀 Feature development and new integrations</li>
-      <li>🛡️ Keeping the bot free and accessible for all</li>
-    </ul>
-    <p>Even a small donation helps keep the multiverse online. Thank you for your support!</p>
 
-    <form class="pp-container" action="https://www.paypal.com/ncp/payment/RVPN8W4WEVJ3Y" method="post" target="_blank">
-      <input class="pp-RVPN8W4WEVJ3Y" type="submit" value="Donate" />
+  <a class="back-button" href="index.html">← Back</a>
+
+  <div class="gradient-border">
+    <h2 class="glow-title">Donate</h2>
+  </div>
+
+  <main class="content-box">
+    <div class="pp-container">
+      <h3 style="margin-top: 0;">Support Interdimensional Bot</h3>
+      <form action="https://www.paypal.com/ncp/payment/RVPN8W4WEVJ3Y" method="post" target="_blank">
+        <input class="pp-RVPN8W4WEVJ3Y" type="submit" value="Donate" />
+      </form>
       <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
-      <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
-    </form>
+      <section style="font-size: 0.75rem;">
+        Powered by
+        <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height: 0.875rem; vertical-align: middle;" />
+      </section>
+    </div>
   </main>
+
   <footer class="footer-box">
     © 2025 Interdimensional Bot · Created for Discord servers drifting across the multiverse.
   </footer>
