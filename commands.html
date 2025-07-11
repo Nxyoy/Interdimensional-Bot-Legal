@@ -49,8 +49,18 @@
       padding-bottom: 0.5rem;
     }
     .back-button {
+      position: absolute;
       top: 40px;
       left: 45px;
+      background-color: #2e96db;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .back-button:hover {
+      background-color: #50b2f0;
     }
   </style>
   <script>
@@ -65,8 +75,13 @@
   <div class="side-bar left"></div>
   <div class="side-bar right"></div>
   <a class="back-button" href="index.html">← Back</a>
+
+  <!-- Title with animated gradient border and glow -->
+  <div class="gradient-border" style="margin-top: 6rem;">
+    <h1 class="glow-title">Commands</h1>
+  </div>
+
   <main class="content-box">
-    <h2>Commands</h2>
     <div class="commands-container">
       <div class="command-nav">
         <button onclick="showGroup('all')">All</button>
@@ -77,6 +92,7 @@
         <button onclick="showGroup('music')">Music</button>
       </div>
       <div>
+        <!-- Command Groups Start Here -->
         <div class="command-group active" id="all">
           <div class="command-title">🎮 Fun</div>
           <ul>
@@ -111,6 +127,8 @@
             <li><code>/queue</code> – Show the queue</li>
           </ul>
         </div>
+
+        <!-- Individual Tabs -->
         <div class="command-group" id="fun">
           <div class="command-title">🎮 Fun</div>
           <ul>
@@ -118,6 +136,7 @@
             <li><code>/rate</code> – Get a random rating of anything</li>
           </ul>
         </div>
+
         <div class="command-group" id="economy">
           <div class="command-title">💼 Economy</div>
           <ul>
@@ -129,6 +148,7 @@
             <li><code>/withdraw</code> – Take money from the bank</li>
           </ul>
         </div>
+
         <div class="command-group" id="tools">
           <div class="command-title">🛠️ Tools</div>
           <ul>
@@ -136,6 +156,7 @@
             <li><code>/help</code> – Display help menu</li>
           </ul>
         </div>
+
         <div class="command-group" id="moderation">
           <div class="command-title">🪯 Moderation</div>
           <ul>
@@ -145,6 +166,7 @@
             <li><code>/unmute</code> – Unmute a user</li>
           </ul>
         </div>
+
         <div class="command-group" id="music">
           <div class="command-title">🔊 Music</div>
           <ul>
@@ -156,6 +178,7 @@
       </div>
     </div>
   </main>
+
   <footer class="footer-box">
     © 2025 Interdimensional Bot · Created for Discord servers drifting across the multiverse.
   </footer>
