@@ -22,7 +22,20 @@
       font-size: 1rem;
       line-height: 1.25rem;
       cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     }
+
+    form.pp-container {
+      background-color: #f2f2f2;
+      padding: 1.5rem;
+      border-radius: 12px;
+      display: inline-grid;
+      justify-items: center;
+      align-content: start;
+      gap: 0.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
     .back-button {
       top: 40px;
       left: 45px;
@@ -44,7 +57,7 @@
     </ul>
     <p>Even a small donation helps keep the multiverse online. Thank you for your support!</p>
 
-    <form action="https://www.paypal.com/ncp/payment/RVPN8W4WEVJ3Y" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+    <form class="pp-container" action="https://www.paypal.com/ncp/payment/RVPN8W4WEVJ3Y" method="post" target="_blank">
       <input class="pp-RVPN8W4WEVJ3Y" type="submit" value="Donate" />
       <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
       <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
