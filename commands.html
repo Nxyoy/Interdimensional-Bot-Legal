@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- commands.html -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -76,7 +75,6 @@
   <div class="side-bar right"></div>
   <a class="back-button" href="index.html">← Back</a>
 
-  <!-- Title with animated gradient border and glow -->
   <div class="gradient-border" style="margin-top: 6rem;">
     <h1 class="glow-title">Commands</h1>
   </div>
@@ -87,31 +85,45 @@
         <button onclick="showGroup('all')">All</button>
         <button onclick="showGroup('fun')">Fun</button>
         <button onclick="showGroup('economy')">Economy</button>
+        <button onclick="showGroup('games')">Games</button>
         <button onclick="showGroup('tools')">Tools</button>
         <button onclick="showGroup('moderation')">Moderation</button>
         <button onclick="showGroup('music')">Music</button>
+        <button onclick="showGroup('admin')">Admin</button>
+        <button onclick="showGroup('general')">General</button>
       </div>
       <div>
-        <!-- Command Groups Start Here -->
         <div class="command-group active" id="all">
           <div class="command-title">🎮 Fun</div>
           <ul>
-            <li><code>/8ball</code> – Ask the magic ball a question</li>
-            <li><code>/rate</code> – Get a random rating of anything</li>
+            <li><code>/8ball</code> – Ask the magic 8-ball a question!</li>
+            <li><code>/rate</code> – Get a super accurate rating of something</li>
           </ul>
           <div class="command-title">💼 Economy</div>
           <ul>
-            <li><code>/work</code> – Earn some cash</li>
-            <li><code>/crime</code> – Take a risk for money</li>
-            <li><code>/beg</code> – Beg for spare change</li>
-            <li><code>/balance</code> – View your wallet & bank</li>
-            <li><code>/deposit</code> – Move money into the bank</li>
-            <li><code>/withdraw</code> – Take money from the bank</li>
+            <li><code>/work</code> – Do some work to earn money.</li>
+            <li><code>/crime</code> – Attempt a criminal act for cash.</li>
+            <li><code>/beg</code> – Beg for money like a cosmic peasant.</li>
+            <li><code>/rob</code> – Try to rob another user!</li>
+            <li><code>/balance</code> – Check your balance (cash, bank, total).</li>
+            <li><code>/deposit</code> – Deposit cash from your hand into your bank.</li>
+            <li><code>/withdraw</code> – Withdraw cash from your bank to your hand.</li>
+          </ul>
+          <div class="command-title">🎲 Games</div>
+          <ul>
+            <li><code>/tictactoe</code> – Challenge another user to a game of Tic-Tac-Toe!</li>
+            <li><code>/roulette</code> – Play a game of roulette!</li>
+            <li><code>/blackjack</code> – Play a game of blackjack against the bot!</li>
+            <li><code>/catsino</code> – Wager your cats for a chance at a higher rarity!</li>
+            <li><code>/catsino-log</code> – View your cat gambling history.</li>
           </ul>
           <div class="command-title">🛠️ Tools</div>
           <ul>
-            <li><code>/invite</code> – Get the bot invite link</li>
+            <li><code>/invite</code> – Get the bot's invite link</li>
             <li><code>/help</code> – Display help menu</li>
+            <li><code>/debugsync</code> – Debug command to re-sync all global slash commands and list them.</li>
+            <li><code>/serverstats</code> – Displays CPU, RAM, and latency usage.</li>
+            <li><code>/changelog</code> – View the latest changes.</li>
           </ul>
           <div class="command-title">🪯 Moderation</div>
           <ul>
@@ -122,38 +134,71 @@
           </ul>
           <div class="command-title">🔊 Music</div>
           <ul>
-            <li><code>/play</code> – Play from YouTube, Spotify, SoundCloud</li>
-            <li><code>/skip</code> – Skip the current song</li>
-            <li><code>/queue</code> – Show the queue</li>
+            <li><code>/play</code> – Play a song or add it to the queue.</li>
+            <li><code>/skip</code> – Skip the current song.</li>
+            <li><code>/loop</code> – Manage music looping.</li>
+            <li><code>/playlist</code> – Manage your saved playlists.</li>
+            <li><code>/stop</code> – Stop playback and clear the queue.</li>
+            <li><code>/pause</code> – Pause the current song.</li>
+            <li><code>/resume</code> – Resume the paused song.</li>
+            <li><code>/queue</code> – Show the current song queue.</li>
+          </ul>
+          <div class="command-title">👑 Admin</div>
+          <ul>
+            <li><code>/forcecat</code> – [ADMIN ONLY] Forces a cat to spawn.</li>
+            <li><code>/clearcat</code> – [ADMIN ONLY] Clear any active cat in this guild (Admin only)</li>
+            <li><code>/setcatchannel</code> – [ADMIN ONLY] Enable or disable cat spawning in a specific channel.</li>
+            <li><code>/changespawnrate</code> – [ADMIN ONLY] Change the cat spawn interval for this server.</li>
+            <li><code>/setadminrole</code> – [ADMIN ONLY] Set a custom role that can run admin commands.</li>
+            <li><code>/set-daily-income-roles</code> – [ADMIN ONLY] Set roles that can collect daily income.</li>
+          </ul>
+          <div class="command-title">✨ General</div>
+          <ul>
+            <li><code>/greet</code> – Greets the user</li>
+            <li><code>/brew</code> – Brew a coffee</li>
           </ul>
         </div>
 
-        <!-- Individual Tabs -->
         <div class="command-group" id="fun">
           <div class="command-title">🎮 Fun</div>
           <ul>
-            <li><code>/8ball</code> – Ask the magic ball a question</li>
-            <li><code>/rate</code> – Get a random rating of anything</li>
+            <li><code>/8ball</code> – Ask the magic 8-ball a question!</li>
+            <li><code>/rate</code> – Get a super accurate rating of something</li>
           </ul>
         </div>
 
         <div class="command-group" id="economy">
           <div class="command-title">💼 Economy</div>
           <ul>
-            <li><code>/work</code> – Earn some cash</li>
-            <li><code>/crime</code> – Take a risk for money</li>
-            <li><code>/beg</code> – Beg for spare change</li>
-            <li><code>/balance</code> – View your wallet & bank</li>
-            <li><code>/deposit</code> – Move money into the bank</li>
-            <li><code>/withdraw</code> – Take money from the bank</li>
+            <li><code>/work</code> – Do some work to earn money.</li>
+            <li><code>/crime</code> – Attempt a criminal act for cash.</li>
+            <li><code>/beg</code> – Beg for money like a cosmic peasant.</li>
+            <li><code>/rob</code> – Try to rob another user!</li>
+            <li><code>/balance</code> – Check your balance (cash, bank, total).</li>
+            <li><code>/deposit</code> – Deposit cash from your hand into your bank.</li>
+            <li><code>/withdraw</code> – Withdraw cash from your bank to your hand.</li>
+          </ul>
+        </div>
+
+        <div class="command-group" id="games">
+          <div class="command-title">🎲 Games</div>
+          <ul>
+            <li><code>/tictactoe</code> – Challenge another user to a game of Tic-Tac-Toe!</li>
+            <li><code>/roulette</code> – Play a game of roulette!</li>
+            <li><code>/blackjack</code> – Play a game of blackjack against the bot!</li>
+            <li><code>/catsino</code> – Wager your cats for a chance at a higher rarity!</li>
+            <li><code>/catsino-log</code> – View your cat gambling history.</li>
           </ul>
         </div>
 
         <div class="command-group" id="tools">
           <div class="command-title">🛠️ Tools</div>
           <ul>
-            <li><code>/invite</code> – Get the bot invite link</li>
+            <li><code>/invite</code> – Get the bot's invite link</li>
             <li><code>/help</code> – Display help menu</li>
+            <li><code>/debugsync</code> – Debug command to re-sync all global slash commands and list them.</li>
+            <li><code>/serverstats</code> – Displays CPU, RAM, and latency usage.</li>
+            <li><code>/changelog</code> – View the latest changes.</li>
           </ul>
         </div>
 
@@ -170,11 +215,37 @@
         <div class="command-group" id="music">
           <div class="command-title">🔊 Music</div>
           <ul>
-            <li><code>/play</code> – Play from YouTube, Spotify, SoundCloud</li>
-            <li><code>/skip</code> – Skip the current song</li>
-            <li><code>/queue</code> – Show the queue</li>
+            <li><code>/play</code> – Play a song or add it to the queue.</li>
+            <li><code>/skip</code> – Skip the current song.</li>
+            <li><code>/loop</code> – Manage music looping.</li>
+            <li><code>/playlist</code> – Manage your saved playlists.</li>
+            <li><code>/stop</code> – Stop playback and clear the queue.</li>
+            <li><code>/pause</code> – Pause the current song.</li>
+            <li><code>/resume</code> – Resume the paused song.</li>
+            <li><code>/queue</code> – Show the current song queue.</li>
           </ul>
         </div>
+
+        <div class="command-group" id="admin">
+          <div class="command-title">👑 Admin</div>
+          <ul>
+            <li><code>/forcecat</code> – [ADMIN ONLY] Forces a cat to spawn.</li>
+            <li><code>/clearcat</code> – [ADMIN ONLY] Clear any active cat in this guild (Admin only)</li>
+            <li><code>/setcatchannel</code> – [ADMIN ONLY] Enable or disable cat spawning in a specific channel.</li>
+            <li><code>/changespawnrate</code> – [ADMIN ONLY] Change the cat spawn interval for this server.</li>
+            <li><code>/setadminrole</code> – [ADMIN ONLY] Set a custom role that can run admin commands.</li>
+            <li><code>/set-daily-income-roles</code> – [ADMIN ONLY] Set roles that can collect daily income.</li>
+          </ul>
+        </div>
+
+        <div class="command-group" id="general">
+          <div class="command-title">✨ General</div>
+          <ul>
+            <li><code>/greet</code> – Greets the user</li>
+            <li><code>/brew</code> – Brew a coffee</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </main>
